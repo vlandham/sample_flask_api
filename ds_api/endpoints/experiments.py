@@ -29,5 +29,8 @@ class Experiments(Resource):
 
         # args = TYPE_ARGUMENTS.parse_args(request)
 
-        # return Experiment.query()
+        rtn = Experiment.query.all()
+        print('*********')
+        # print(rtn)
+        #return rtn
         return {'results': [{'zid':1, 'name': 'a experiment'}]}

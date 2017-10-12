@@ -18,6 +18,7 @@ from ds_api.endpoints.experiments import EXPERIMENTS_NS
 
 # API is defined here
 from ds_api.rest_api import API
+from ds_api.data import db
 
 ROOT = logging.getLogger()
 ROOT.setLevel(logging.DEBUG)
@@ -31,6 +32,8 @@ API.add_namespace(EXPERIMENTS_NS)
 
 # init API with Flask App
 API.init_app(app)
+
+db.init_app(app)
 
 DEBUG_FLAG = True
 # API_MODE = os.environ.get("API_MODE")
