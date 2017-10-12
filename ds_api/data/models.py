@@ -4,7 +4,8 @@ from flask_restplus import fields
 from ds_api.rest_api import API
 
 ExperimentApi = API.model('Experiment', {
-    "ZID": fields.Integer(readOnly=True, description='Experiment ZId')
+    "zid": fields.Integer(readOnly=True, description='Experiment ZId'),
+    "name": fields.String(readOnly=True, description='Name')
 })
 
 ExperimentsApi = API.model('Experiments', {
